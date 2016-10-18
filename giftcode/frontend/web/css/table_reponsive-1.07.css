@@ -1,0 +1,24 @@
+@media (max-width: 760px){
+  .gift-history td:nth-of-type(1):before { content: "STT"; }
+  .gift-history td:nth-of-type(2):before { content: "Loại quà/code"; }
+  .gift-history td:nth-of-type(3):before { content: "Thông tin"; }
+  .gift-history td:nth-of-type(4):before { content: "Ngày nhận"; }
+  .gift-history td:nth-of-type(5):before { content: "Kết quả"; }
+}
+
+/*-------*/
+.detail-wrap .game-info .rside .conditions-block .code-conditions .lnk.action >a:after { content: "Thực hiện"; }
+
+/*--Label of item-----*/
+.item-list ul li.empty .lb:before{ content: "hết"; }
+.item-list ul li.new .lb:before{ content: ""; }
+.item-list ul li.opensoon .lb:before{ content: "sắp mở"; }
+.item-list ul li.special .lb:before{ content: "đặc biệt"; }
+/**/
+.detail-wrap .big-img-view.empty .lb:before{ content: "Hết"; }
+.detail-wrap .big-img-view.new .lb:before{ content: ""; }
+.detail-wrap .big-img-view.opensoon .lb:before{ content: "Sắp mở"; }
+.detail-wrap .big-img-view.special .lb:before{ content: "Đặc biệt"; }
+
+.item-list2 li.opensoon .lb:before{ content: "SẮP DIỄN RA"; }
+.item-list2 li.end .lb:before{ content: "KẾT THÚC"; }

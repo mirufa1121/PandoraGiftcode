@@ -1,0 +1,132 @@
+html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,abbr, address, cite, code,del, dfn, em, img, ins, kbd, q, samp,small, strong, sub, sup, var,b, i,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary,time, mark, audio, video{margin:0;padding:0;border:0 none;list-style:none;font-size:100%;border-spacing:0;border-collapse:collapse;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+html, body{height:100%;font-family:"Roboto", Helvetica;font-size:13px;color:#404040;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+nav, article, section,header,footer,aside,footer{display:block;margin:0;padding:0;}
+a{text-decoration:none;color:#404040;}
+a:hover{text-decoration:none;color:#2ba9ea;}
+.zmtopapp_title .appstore_ico,.login_input .input_icn em,.login_othersocial .socialbtn em,.zmloginfooter .support_platform li span,.slidepaging a{background-image:url(../images/zmlogin/zmlogin_sprt.png);}
+
+/*Radio & checkbox*/
+input[type="radio"] + label span.radio,input[type="checkbox"] + label span.checkbox{background:url(../images/eformsprt.png);background-repeat:no-repeat;}
+input[type="radio"] + label,input[type="checkbox"] + label{margin-right:10px;}
+
+	/*group radio/list list*/
+	.verticalgrp input[type="radio"] + label,.verticalgrp input[type="checkbox"] + label{display:block;padding:3px 0 3px 20px;}
+	.verticalgrp input[type="radio"] + label span.radio,.verticalgrp input[type="checkbox"] + label span.checkbox{margin-left:-20px;}
+
+	/*Radio button */
+	input[type="radio"] {display:none;}
+	input[type="radio"] + label span.radio{display:inline-block;width:16px;height:16px;margin-right:4px;vertical-align:-3px;background-position:0 0;cursor:pointer;}
+	input[type="radio"]:checked + label span.radio{background-position:0 -32px;}
+
+	/*Checkbox*/
+	input[type="checkbox"] {display:none;}
+	input[type="checkbox"] + label span.checkbox{display:inline-block;width:16px;height:16px;margin-right:4px;vertical-align:-3px;background-position:-16px 0;cursor:pointer;}
+	input[type="checkbox"]:checked + label span.checkbox{background-position:-16px -32px;}
+
+/*Keyframe animations*/
+@keyframes zoomthumb {
+	0% {transform: scale(1);-webkit-transform: scale(1);-moz-transform: scale(1);}
+	50% {transform: scale(1.02);-webkit-transform: scale(1.02);-moz-transform: scale(1.02);}
+	100% {transform: scale(1);-webkit-transform: scale(1);-moz-transform: scale(1);}
+}
+@-webkit-keyframes zoomthumb {
+	0% {transform: scale(1);-webkit-transform: scale(1);-moz-transform: scale(1);}
+	50% {transform: scale(1.02);-webkit-transform: scale(1.02);-moz-transform: scale(1.02);}
+	100% {transform: scale(1);-webkit-transform: scale(1);-moz-transform: scale(1);}
+}
+@keyframes zoomcornericon {
+	0% {transform: scale(1);-webkit-transform: scale(1);-moz-transform: scale(1);}
+	50% {transform: scale(1.06);-webkit-transform: scale(1.06);-moz-transform: scale(1.06);}
+	100% {transform: scale(1);-webkit-transform: scale(1);-moz-transform: scale(1);}
+}
+@-webkit-keyframes zoomcornericon {
+	0% {transform: scale(1);-webkit-transform: scale(1);-moz-transform: scale(1);}
+	50% {transform: scale(1.06);-webkit-transform: scale(1.06);-moz-transform: scale(1.06);}
+	100% {transform: scale(1);-webkit-transform: scale(1);-moz-transform: scale(1);}
+}
+
+/*### Structure ###*/
+.zmloginbg{background:url("../images/zmlogin/login_bg_2015_trungthu.jpg") top center no-repeat;}
+.zmlogin_wrapper{margin:0 auto;width:960px;overflow:hidden;height:670px;}
+
+/* ### Left columm  ###*/
+.zmlogin_left{float:left;width:543px;padding:0 10px;}
+	.zmloginr_header{height:75px;}
+	.slidepaging{position:absolute;right:7px;bottom:7px;}
+	.slidepaging li{float:left;margin-left:2px;}
+	.slidepaging a{float:left;width:9px;height:9px;text-indent:-99999em;background-position:-112px -32px;margin-left:2px;}
+	.slidepaging a:hover,.slidepaging a.selected{background-position:-128px -32px;}
+	.slidebanner,.slidebanner li.slideimgwrapper{width:543px;height:230px;}
+	.slidebanner{overflow:hidden;margin-bottom:12px;position:relative;}
+	.slidebanner li.slideimgwrapper{float:left;}
+	/*list app*/
+	.zmtopapp_title{margin-bottom:10px;}
+	.zmtopapp_title .texttitle{text-transform:uppercase;font-weight:bold;font-size:14px;}
+	.zmtopapp_title .appstore_ico{display:inline-block;margin-right:5px;background-position:-160px 0;width:26px;height:17px;}
+	.zmtopapp_title .zmtopapp_more{float:right;font-size:11px;text-transform:uppercase;color:#666;text-decoration:none;margin-top:3px;}
+	.zmtopapp_title .zmtopapp_more:hover{text-decoration:underline;}
+	.list_topapps{margin-right:-34px;width:578px;}
+	.list_topapps li{float:left;width:110px;line-height:16px;margin-right:34px;padding-bottom:18px;}
+	.list_topapps .topappcell{color:#404040;display:block;}
+	.list_topapps .topappcell:hover{text-decoration:none;}
+	.list_topapps .topappcell .thumbcorner_icn{display:block;position:absolute;right:-2px;top:-2px;background-image:url(../images/app_hotnew_label.png);width:42px;height:41px;z-index:1;}
+	.list_topapps .topappcell.hot,.list_topapps .topappcell.new{position:relative;}
+	.list_topapps .topappcell.new .thumbcorner_icn{background-position:-43px 0;}
+	.list_topapps .topappthumb img{border-radius:6px;width:110px;height:110px;margin-bottom:5px;vertical-align:bottom;}
+	.list_topapps .topappcell:hover .thumbcorner_icn{-moz-animation: zoomcornericon 0.5s;animation: zoomcornericon 0.5s;-webkit-animation: zoomcornericon 0.5s;}
+	.list_topapps .topappthumb:hover img{-moz-animation: zoomthumb 0.5s; -webkit-animation: zoomthumb 0.5s; animation: zoomthumb 0.5s;}
+	.list_topapps .topappname{font-size:12px;text-transform:uppercase;color:#404040;font-weight:bold;margin-bottom:2px;text-decoration:none;white-space:nowrap;overflow:hidden;display:block;text-overflow:ellipsis;}
+	.list_topapps .topapp_view{font-size:12px;color:#888;white-space:nowrap;overflow:hidden;display:block;text-overflow:ellipsis;}
+
+/* ### Right columm  ###*/
+.zmlogin_right{float:right;width:337px;padding:25px 30px 0;height:641px;position:relative;}
+	.zmlogin_heading{color:#404040;text-transform:uppercase;font-size:25px;font-weight:300;line-height:normal;margin-bottom:15px;}
+	.login_errormsg{color:#E74C3C;font-size:12px;padding-bottom:10px;}
+	.zmloginform{padding-bottom:30px;}
+	.login_input{border-radius:3px;border:1px solid #9c9c9c;padding:1px;background-color:#fff;height:34px;margin-bottom:15px;}
+	.login_input .input_icn{float:left;background-color:#e0e0e0;width:30px;height:25px;border-radius:2px 0 0 2px;padding:9px 0 0 12px;}
+	.login_input .input_icn em{display:inline-block;width:16px;height:16px;}
+	.login_input .input_icn em.user{background-position:-96px 0;}
+	.login_input .input_icn em.pass{background-position:-128px 0;}
+	.login_input .input_text{margin-left:42px;}
+	.login_input .input_text input{border:0;width:276px;margin:0;font-size:15px;color:#a0a0a0;-webkit-tap-highlight-color:rgba(0,0,0,0);outline:none;padding:8px;background:none transparent;height:18px;}
+	.login_input.error{border-color:#e68282;position:relative;}
+	.login_input.error .errormsg{color:#fff;font-size:12px;border-radius:3px;position:absolute;background-color:#e58084;top:-40px;right:-2px;}
+	.login_input.error .errormsg p{padding:8px;}
+	.login_input.error .errormsg:after{content:" ";display:block;border:6px solid transparent;border-top-color:#e58084;margin-bottom:-15px;width:0;height:0;float:right;margin-right:10px;transform:scale(1.001);-moz-transform:scale(1.001);}
+	.zmloginbtn{display:block;border-radius:3px;color:#fff;text-transform:uppercase;font-weight:bold;background-color:#1f83dd;text-align:center;height:40px;line-height:40px;font-size:14px;}
+	.zmloginbtn:hover{color:#fff;text-decoration:none;background-color:#0a73d2;}
+	.login_othersocial{padding-bottom:50px;height:75px;}
+	.login_othersocial p{padding-bottom:15px;text-align:center;}
+	.login_othersocial .zmlogin_socialbtns{text-align:justify;}
+	.login_othersocial .zmlogin_socialbtns:after{  content: '';display: inline-block;width: 100%;}
+	.login_othersocial .socialbtn{display:inline-block;border-radius:3px;border:1px solid #b3b3b3;height:38px;width:98px;text-align:center;vertical-align:bottom; background-color:#fff;}
+	.login_othersocial .socialbtn em{display:inline-block;}
+		.fbbtn.socialbtn em{width:16px;height:26px;background-position:0 -32px;margin-top:6px;}
+		.gplusbtn.socialbtn em{width:24px;height:24px;background-position:-32px -32px;margin-top:7px;}
+		.yahoobtn.socialbtn em{background-position:-64px -32px;width:32px;height:18px;margin-top:9px;}
+	/*hover*/
+	.fbbtn.socialbtn:hover{background-color:#1f76c5;border-color:#1f76c5;}
+	.fbbtn.socialbtn:hover em{background-position:0 -64px;}
+	.gplusbtn.socialbtn:hover{background-color:#dd0707;border-color:#dd0707;}
+	.gplusbtn.socialbtn:hover em{background-position:-32px -64px;}
+	.yahoobtn.socialbtn:hover{background-color:#92278f;border-color:#92278f;}
+	.yahoobtn.socialbtn:hover em{background-position:-64px -64px;}
+	/* ### */
+	.login_sublink{margin:-3px 0 15px;}
+	.login_sublink .forgotpass{float:right;}
+	.zmregarea{text-align:center;}
+	.zmregarea p{padding-bottom:8px;}
+	.zmregarea .zmregbtn a{height:38px;text-align:center;border-radius:3px;font-size:14px;background-color:#f5781b;margin:0 auto;display:inline-block;padding:0 30px;}
+	.zmregarea .zmregbtn a:hover{background-color:#eb500c;}
+	.zmloginfooter{margin-top:70px;line-height:20px;position:absolute;width:337px;bottom:0;left:auto;}
+	.zmloginfooter .copyright_text{text-align:center;color:#5c5c5c;font-size:12px;}
+	.zmloginfooter .support_platform{text-align:center;margin-bottom:20px;}
+	.zmloginfooter .support_platform li{margin:0 5px;display:inline;}
+	.zmloginfooter .support_platform li a{color:#5c5c5c;}
+	.zmloginfooter .support_platform li a:hover{color:#333;text-decoration:none;}
+	.zmloginfooter .support_platform li span{display:inline-block;margin-right:6px;vertical-align:-4px;}
+		.support_platform .apple_icon{background-position:-64px 0;width:16px;height:21px;}
+		.support_platform .android_icon{background-position:-32px 0;width:17px;height:20px;}
+		.support_platform .ipad_icon{background-position:0 0;width:16px;height:20px;}

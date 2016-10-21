@@ -549,20 +549,21 @@
                 $("#tabs-menu-all").attr("class", "active")
         }
         b.CONFIG.type = a;
-        g("http://me.zing.vn/megift/ajax/homereload", {
-            type: b.CONFIG.type,
-            query: b.CONFIG.query
+        $.get("?r=home/gettab", {
+            'type': b.CONFIG.type
         }, function(a) {
             $("#home_item_container").html("");
-            b.CONFIG.itemSlice = a.nextSlice;
-            a = a.items;
+			$("#home_item_container").append(a);
+			b.CONFIG.itemSlice = 10;// a.nextSlice;
+             /*a = a.items;
             for (var c in a) {
                 var f = $("<div>" + a[c] + "</div>");
                 $("#home_item_container").append($(f).contents())
             }
             a = $("#home_item_container").children();
             for (c = f = 0; c < a.length; c++) $(a[c]).is(":visible") && f++;
-            12 > f && B.doLoad()
+            12 > f && */
+			//B.doLoad()
         })
     };
     b.reloadPromotion = function(a) {

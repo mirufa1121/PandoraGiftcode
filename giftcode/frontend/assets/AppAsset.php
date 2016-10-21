@@ -19,6 +19,7 @@ class AppAsset extends AssetBundle
     public $js = [
 		'js/jquery.jcarousel.min.js',
 		'js/jcarousel.responsive.js',
+		'js/megift-1.34.js',
 		'js/custom-1.04.js',
 		'js/dropdown.js',
 		'js/modal.js',

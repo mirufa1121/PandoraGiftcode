@@ -44,7 +44,10 @@ class HomeInfo extends \yii\db\ActiveRecord
 			[['data'],'required']
         ];
     }
-	
+	public static function getifcanLike($limit)
+	{
+		return Homeitem::find()->limit($limit)->all();
+	}
 	public static function getHomeReload($type)
 	{
 		$model=new HomeInfo();

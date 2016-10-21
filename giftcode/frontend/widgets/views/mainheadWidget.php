@@ -1,5 +1,6 @@
 <?php
 use yii\helpers\Html;
+use yii\helpers\Url;
 ?>
 <div class="mainhead">
 	<div class="container">
@@ -21,11 +22,11 @@ use yii\helpers\Html;
 					</ul>
 				</li>-->
 				<!--Menu 1 c?p-->
-				<li id="vip" class="">
-					<a href="index.html?type=vip"><span>Code VIP</span></a>
+				<li id="vip" class="<?=($type=="code-vip"?"active":"")?>">
+					<?=Html::a('<span>Code VIP</span>',['site/index','type'=>"code-vip"])?>
 				</li>
-				<li id="new" class="active">
-					<a href="index.html?type=new"><span>Code tân thủ</span></a>
+				<li id="new" class="<?=($type=="code-tan-thu"?"active":"")?>">
+					<?=Html::a('<span>Code tân thủ</span>',['site/index','type'=>"code-tan-thu"])?>
 				</li>
 				<!--<li class="">
 					<a href="/megift/card"><span>Th? di?n tho?i</span></a>
@@ -36,8 +37,8 @@ use yii\helpers\Html;
 				<li class="">
 					<a href="/megift/gift"><span>Qu� t?ng</span></a>
 				</li>-->
-				<li class="">
-					<a href="promotion.html"><span>Sự kiện game</span></a>
+				<li class="<?=($type=="promo"?"active":"")?>">
+					<?=Html::a('<span>Sự kiện game</span>',['site/index','type'=>"promo"])?>
 				</li>
 			</ul><!-- /menu -->
 			<?php

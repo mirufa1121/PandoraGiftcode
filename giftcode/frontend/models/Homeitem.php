@@ -39,7 +39,15 @@ class Homeitem extends \yii\db\ActiveRecord
             [['title'], 'string', 'max' => 128],
         ];
     }
-	
+	public static function getById($id)
+    {
+        $data=Homeitem::findOne(['id'=>$id]);
+        return $data;
+    }
+    public static function getCount()
+    {
+        return Homeitem::find()->count();
+    }
 	public static function getCodeByType($type)
 	{
 		if($type==Homeitem::CODE_ALL)

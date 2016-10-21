@@ -539,10 +539,10 @@
         $("#tabs-menu-new").attr("class", "");
         $("#tabs-menu-all").attr("class", "");
         switch (a) {
-            case "vip":
+            case "code-vip":
                 $("#tabs-menu-vip").attr("class", "active");
                 break;
-            case "new":
+            case "code-tan-thu":
                 $("#tabs-menu-new").attr("class", "active");
                 break;
             default:

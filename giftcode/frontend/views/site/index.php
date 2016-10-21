@@ -16,21 +16,21 @@ use frontend\widgets\bannerSlideWidget;
 						   placeholder="Nhập tên game bạn muốn nhận code">
 				</form>
 			</div>
-			<ul class="tabs-menu">
+			<ul class="tabs-menu" <?=($type=="all"?'class="active"':"")?>>
 				<li id="tabs-menu-all" 
 					>
-					<a href="javascript:void(0)" onclick="meGift.reloadHome('all');">
+					<a href="javascript:void(0)" onclick="reloadHome('all');">
 						Tất cả
 					</a>
 				</li>
-				<li id="tabs-menu-vip" >
-					<a href="javascript:void(0)" onclick="meGift.reloadHome('vip');">
+				<li id="tabs-menu-vip" <?=($type=="code-vip"?'class="active"':"")?>>
+					<a href="javascript:void(0)" onclick="reloadHome('code-vip');">
 						Code VIP
 					</a>
 				</li>
 				<li id="tabs-menu-new" 
-					class="active">
-					<a href="javascript:void(0)" onclick="meGift.reloadHome('new');">
+					<?=($type=="code-tan-thu"?'class="active"':"")?>>
+					<a href="javascript:void(0)" onclick="reloadHome('code-tan-thu');">
 						Code tân thủ
 					</a>
 				</li>
@@ -116,7 +116,32 @@ use frontend\widgets\bannerSlideWidget;
 
 <script type="text/javascript">
 	$(document).ready(function () {
-		meGift.reloadHome('new');
+		reloadHome('<?=empty($type)?"code-tan-thu":$type?>');
 	});
+	reloadHome = function(a) {
+        $("#tabs-menu-vip").attr("class", "");
+        $("#tabs-menu-new").attr("class", "");
+        $("#tabs-menu-all").attr("class", "");
+        switch (a) {
+            case "code-vip":
+                $("#tabs-menu-vip").attr("class", "active");
+                $('#vip').attr("class","active");
+                $("#new").attr("class", "");
+                break;
+            case "code-tan-thu":
+                $("#tabs-menu-new").attr("class", "active");
+                $('#new').attr("class","active");
+                 $("#vip").attr("class", "");
+                break;
+            default:
+                $("#tabs-menu-all").attr("class", "active")
+        }
+        $.get("?r=home/gettab", {
+            'type': a
+        }, function(a) {
+            $("#home_item_container").html("");
+			$("#home_item_container").append(a);
+        })
+    };
 </script>
 <!--/Request server lấy về dữ liệu dạng Json các Slider-->

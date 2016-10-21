@@ -72,7 +72,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $type=Yii::$app->request->get('type');
+        if(empty($type)) $type="code-tan-thu";
+        return $this->render('index',['type'=>$type]);
     }
 
     /**

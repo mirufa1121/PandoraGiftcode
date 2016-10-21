@@ -2,6 +2,7 @@
 
 namespace frontend\widgets;
 
+use Yii;
 use yii\base\Widget;
 
 class mainheadWidget extends Widget
@@ -13,7 +14,9 @@ class mainheadWidget extends Widget
 
 	public function run()
 	{
-		return $this->render('mainheadWidget');
+		$type=Yii::$app->request->get('type');
+		if(empty($type))$type="code-tan-thu";
+		return $this->render('mainheadWidget',['type'=>$type]);
 	}
 }
 ?>
